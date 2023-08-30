@@ -50,7 +50,7 @@ Pper = Patm;
 % B1 = 4.11e-2; B2 = -3.10e-4; B3 = 1.10e-6;
 % viscosity_sol = B1*CTFFA+B2*CTFFA^2+B3*CTFFA^3; % For Bovine Serum Albumin (BSA)
 % A1 = 7.0e-3; A2 = 2.60e-4; A3 = 4.0e-7;
-POsm = 0.25*Patm; % Rg*T*(A1*CTFFA+A2*CTFFA^2+A3*CTFFA^3); For immunoglobulin G (IgG), Experimental fitting to estimate A1, A2 and A3
+POsm = Rg*T*(A1*CTFFA+A2*CTFFA^2+A3*CTFFA^3); % 0.25*Patm; % For immunoglobulin G (IgG), Experimental fitting to estimate A1, A2 and A3
 % CTFFA_max = 800g/L; B = 1.19; viscosity_sol_0 = viscosity_per = 1.75e-5; % This is equivalent to permeate viscosity, i.e, viscosity of the pure solvent, here we could use DI water
 % viscosity_sol = viscosity_sol_0*exp(B*CTFFA/(1-CTFFA/CTFFA_max)); % For immunoglobulin G (IgG)
 % Density_sol and Density_per
